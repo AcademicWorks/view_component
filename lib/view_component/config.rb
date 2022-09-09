@@ -150,7 +150,7 @@ module ViewComponent
       self.preview_paths = Array.wrap(new_value)
     end
 
-    delegate_missing_to :config
+    # delegate_missing_to :config
 
     private
 
