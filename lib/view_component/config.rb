@@ -150,7 +150,9 @@ module ViewComponent
       self.preview_paths = Array.wrap(new_value)
     end
 
-    # delegate_missing_to :config
+    def method_missing(method, *args, &block)
+      config.send(method, *args, &block)
+    end
 
     private
 
